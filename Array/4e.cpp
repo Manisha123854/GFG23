@@ -9,8 +9,11 @@ public:
     int remove_duplicate(int a[],int n){
         // code here
         
+
+        //BF
+
         /*vector<int>v;
-        for(int i=0;i<n-1;i++){
+        for(int i=0;i<n-1;i++){                      //------------> Tc=O(n)   , Sc=O(n)
             
             if(a[i]!=a[i+1]){
                v.push_back(a[i]);
@@ -29,7 +32,7 @@ public:
     
         
      /*set<int>st;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){                          ------------------>  Tc= O(nlogn)+o(n), sc=O(n)
             st.insert(a[i]);
         }
          int x=st.size();
@@ -40,8 +43,11 @@ public:
         }
         
         return x;*/
+
+
+//Best
         
-        int i=0;
+        int i=0;                             // -------------------> Tc= O(n)  ,Sc=O(1)
        for(int j=0;j<n-1;j++) {
            if(a[j]!=a[j+1]){
                a[i++]=a[j];

@@ -7,19 +7,26 @@ https://practice.geeksforgeeks.org/problems/second-largest3735/1?utm_source=yout
 
 class Solution{
 public:	
-	// Function returns the second
-	// largest elements
+	
 	int print2largest(int a[], int n) {
 	    // code here
 	    
 	    
+        //Bf
+       /* 
+
+        if(n<2)                        ----------------> Tc=O(nlog), sc=O(n)
+	    return -1;
+        sort(a,a+n);                 
+        return a[n-2];
+
+	    */
 	    
-	    
-	   /* bf-----
+	   /* betted-----
 	    
 	    if(n<2)
 	    return -1;
-	    int max1=INT_MIN;
+	    int max1=INT_MIN;   -------------------------------> Tc= O(n) and 2 travesal, sc=O(n)
 	    int max2=-1;
 	    for(int i=0;i<n;i++){
 	        if(a[i]>max1)
@@ -41,7 +48,7 @@ public:
 	    
 	   if(n<2)
 	    return -1;
-	    int max1=-1;
+	    int max1=-1;                               //----------------Tc= O(n) and 1 traversal, sc=O(1)
 	    int max2=-1;
 	    
 	    for(int i=0;i<n;i++){
